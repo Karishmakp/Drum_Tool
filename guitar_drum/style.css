@@ -1,0 +1,92 @@
+html {
+    font-size: 10px;
+    background-image: url("img/1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 20px auto;
+    justify-content: center;
+    gap: 10px; /* Adds spacing between the items */
+}
+
+.key {
+    display: inline-block;
+    color: white;
+    width: 15%; /* Make it responsive */
+    max-width: 80px; /* Ensure it doesn't get too large */
+    aspect-ratio: 1; /* Maintain square shape */
+    margin: 5px;
+    border: 6px solid #01c7f8;
+    text-align: center;
+    line-height: 1;
+    font-size: 1.6rem; /* Relative size for flexibility */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    box-sizing: border-box;
+}
+.key.playing {
+    transform: scale(1.1);
+    background-color: #003272;
+    color: #fff;
+}
+
+kbd {
+    display: block;
+    font-size: 2.5rem; /* Adjusted for smaller screens */
+}
+
+.sound {
+    font-size: 1rem; /* Smaller font for mobile */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d6c588;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .key {
+        width: 20%;
+        max-width: 60px;
+        font-size: 1.4rem;
+    }
+
+    kbd {
+        font-size: 2rem;
+    }
+
+    .sound {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .key {
+        width: 25%;
+        max-width: 50px;
+        font-size: 1.2rem;
+    }
+
+    kbd {
+        font-size: 1.8rem;
+    }
+
+    .sound {
+        font-size: 0.8rem;
+    }
+}
